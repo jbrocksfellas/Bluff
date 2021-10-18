@@ -1,0 +1,234 @@
+*, *::after, *::before { 
+    box-sizing: border-box;
+  }
+  
+  /* body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 10rem);
+    grid-template-rows: 14rem 4rem 14rem;
+    gap: .5rem;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: 1rem;
+  } */
+  
+  .deck {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: .5rem;
+    color: white;
+    user-select: none;
+  }
+  
+  .computer-deck {
+    background-color: green;
+  }
+  
+  .player-deck {
+    background-color: blue;
+  }
+  
+  .text {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+  }
+  
+  .card.red {
+    color: red;
+  }
+  
+  .card.black {
+    color: black;
+  }
+  
+  .card::before,
+  .card::after {
+    position: absolute;
+    content: attr(data-value);
+    font-size: 1.5rem;
+  }
+  
+  .card::before {
+    top: .5rem;
+    left: .5rem
+  }
+  
+  .card::after {
+    bottom: .5rem;
+    right: .5rem;
+    transform: rotate(180deg);
+  }
+
+.bunch-of-cards {
+    /* background-color: black; */
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 25%;
+    top: 100px;
+    transform: rotate(70deg);
+}
+
+.bunch-of-cards div {
+    --angle : -13.8461deg;
+    width: 150px;
+    height: 225px;
+    background-color: white;
+    position: absolute;
+
+}
+
+.card1 {
+    transform: rotate(calc(1 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 13;
+}
+
+.card2 {
+    transform: rotate(calc(2 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 12;
+}
+
+.card3 {
+    transform: rotate(calc(3 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 11;
+}
+
+.card4 {
+    transform: rotate(calc(4 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 10;
+}
+
+.card5 {
+    transform: rotate(calc(5 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 9;
+}
+
+.card6 {
+    transform: rotate(calc(6 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 8;
+}
+
+.card7 {
+    transform: rotate(calc(7 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 7;
+}
+
+.card8 {
+    transform: rotate(calc(8 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 6;
+}
+
+.card9 {
+    transform: rotate(calc(9 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 5;
+}
+
+.card10 {
+    transform: rotate(calc(10 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 4;
+}
+
+.card11 {
+    transform: rotate(calc(11 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 3;
+}
+
+.card12 {
+
+    transform: rotate(calc(12 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 2;
+}
+
+.card13 {
+    transform: rotate(calc(13 * var(--angle)));
+    transform-origin: 0% 100%;
+    z-index: 1;
+}
+
+.selected {
+  border: 4px solid goldenrod;
+}
+
+.input {
+  height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.current-card {
+  width: 150px;
+  height: 225px;
+}
+
+
+.middle {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.current-player {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.updates {
+  width: 200px;
+  height: 100%;
+  padding-left: 10px;
+  background-color: black;
+}
+
+.updates p {
+  color: white;
+
+}
+
+
+div.create-container {
+  display: block;
+  width: max-content;
+  margin-top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
